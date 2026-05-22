@@ -3,8 +3,16 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 const imagenes = {
   hero: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80',
   corte: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80',
+  corteAutor1: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80',
+  corteAutor2: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80',
+  corteAutor3: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80',
+  corteAutor4: 'https://images.unsplash.com/photo-1582095133179-bfd08e2d0008?w=600&q=80',
+  corteAutor5: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80',
+  corteServicio: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80',
   color: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80',
+  colorServicio: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80',
   tratamiento: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80',
+  tratamientoServicio: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
   galeria1: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=500&q=80',
   galeria2: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=500&q=80',
   galeria3: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80',
@@ -29,21 +37,21 @@ const services = [
     title: 'Corte de Autor',
     description: 'Diseño visagista, forma precisa y acabado pulido para un look moderno y fácil de peinar.',
     price: '$45',
-    image: imagenes.corte,
+    image: imagenes.corteAutor5,
     alt: 'Estilista realizando un corte de cabello profesional',
   },
   {
     title: 'Coloración Signature',
     description: 'Balayage, gloss y tonos personalizados para lograr brillo profundo y dimensión elegante.',
     price: '$78',
-    image: imagenes.color,
+    image: imagenes.colorServicio,
     alt: 'Aplicación de coloración en cabello rubio',
   },
   {
     title: 'Tratamiento Lumina',
     description: 'Nutrición intensa, reparación de fibra y sellado de cutícula para recuperar suavidad y fuerza.',
     price: '$62',
-    image: imagenes.tratamiento,
+    image: imagenes.tratamientoServicio,
     alt: 'Tratamiento capilar con producto aplicado en cabello',
   },
 ];
@@ -53,6 +61,14 @@ const gallery = [
   { src: imagenes.galeria2, alt: 'Styling de cabello con acabado editorial' },
   { src: imagenes.galeria3, alt: 'Mujer con look de salón moderno' },
   { src: imagenes.galeria4, alt: 'Cabello brillante con estilo de moda 2025' },
+  { src: imagenes.corteAutor1, alt: 'Corte autor: estilista cortando con precisión' },
+  { src: imagenes.corteAutor2, alt: 'Corte autor: bob preciso' },
+  { src: imagenes.corteAutor3, alt: 'Corte autor: tijeras profesionales detalle' },
+  { src: imagenes.corteAutor4, alt: 'Corte autor: detalle de cabello fino' },
+  { src: imagenes.corteAutor5, alt: 'Corte autor: resultado final corte moderno' },
+  { src: imagenes.corteServicio, alt: 'Corte moderno y detalle de textura' },
+  { src: imagenes.colorServicio, alt: 'Coloración con acabado luminoso' },
+  { src: imagenes.tratamientoServicio, alt: 'Tratamiento nutritivo y brillo intenso' },
 ];
 
 const testimonials = [
@@ -180,10 +196,10 @@ function SmartImage({ src, alt, className = '', imageClassName = '', fallbackCla
       ) : (
         <div className={`image-fallback ${fallbackClassName}`.trim()} aria-hidden="true">
           <svg viewBox="0 0 240 180" role="img" aria-label="Imagen no disponible">
-            <rect x="0" y="0" width="240" height="180" rx="24" fill="#E7E3DB" />
-            <circle cx="92" cy="78" r="28" fill="#1A5C4A" opacity="0.2" />
-            <path d="M48 138c20-25 42-38 72-38s52 13 72 38" fill="none" stroke="#1A5C4A" strokeWidth="6" strokeLinecap="round" />
-            <path d="M80 64c8-8 17-12 28-12 14 0 25 5 35 15" fill="none" stroke="#FF6B35" strokeWidth="6" strokeLinecap="round" />
+            <rect x="0" y="0" width="240" height="180" rx="24" fill="#F3EAE5" />
+            <circle cx="92" cy="78" r="28" fill="#A8D8C8" opacity="0.32" />
+            <path d="M48 138c20-25 42-38 72-38s52 13 72 38" fill="none" stroke="#A8D8C8" strokeWidth="6" strokeLinecap="round" />
+            <path d="M80 64c8-8 17-12 28-12 14 0 25 5 35 15" fill="none" stroke="#F5A39A" strokeWidth="6" strokeLinecap="round" />
           </svg>
         </div>
       )}
@@ -249,6 +265,7 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [statsVisible, setStatsVisible] = useState(false);
+  const [galleryLargeIndex, setGalleryLargeIndex] = useState(0);
   const { visibleMap, setSectionRef } = useIntersectionReveal();
   const statsValues = useCountUp(statsVisible);
   const statsSectionRef = useRef(null);
@@ -290,10 +307,19 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGalleryLargeIndex((i) => (i + 1) % gallery.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   const countItems = statsTargets.map((item, index) => ({
     ...item,
     renderedValue: statsValues[index],
   }));
+
+  
 
   return (
     <div className="page-shell">
@@ -301,14 +327,14 @@ export default function App() {
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
         :root {
-          --cream: #FAFAF7;
-          --emerald: #1A5C4A;
-          --coral: #FF6B35;
-          --ink: #1A1A1A;
-          --muted: rgba(26, 26, 26, 0.68);
-          --line: rgba(26, 26, 26, 0.1);
-          --shadow-lg: 0 30px 80px rgba(26, 26, 26, 0.14);
-          --shadow-md: 0 18px 40px rgba(26, 26, 26, 0.1);
+          --cream: #FFF9F6;
+          --emerald: #A8D8C8;
+          --coral: #F5A39A;
+          --ink: #3E3A38;
+          --muted: rgba(62, 58, 56, 0.68);
+          --line: rgba(62, 58, 56, 0.1);
+          --shadow-lg: 0 30px 80px rgba(117, 98, 92, 0.12);
+          --shadow-md: 0 18px 40px rgba(117, 98, 92, 0.08);
           --radius-xl: 34px;
           --radius-lg: 26px;
           --radius-md: 18px;
@@ -325,8 +351,8 @@ export default function App() {
         body {
           margin: 0;
           background:
-            radial-gradient(circle at top left, rgba(26, 92, 74, 0.1), transparent 26%),
-            radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1), transparent 22%),
+            radial-gradient(circle at top left, rgba(168, 216, 200, 0.24), transparent 26%),
+            radial-gradient(circle at 80% 20%, rgba(245, 163, 154, 0.2), transparent 22%),
             linear-gradient(180deg, #FFFFFF 0%, var(--cream) 100%);
           color: var(--ink);
           font-family: 'Outfit', sans-serif;
@@ -364,13 +390,13 @@ export default function App() {
         .page-shell::before {
           top: 6vh;
           left: -14vw;
-          background: radial-gradient(circle, rgba(26, 92, 74, 0.42), transparent 70%);
+          background: radial-gradient(circle, rgba(168, 216, 200, 0.48), transparent 70%);
         }
 
         .page-shell::after {
           bottom: 6vh;
           right: -14vw;
-          background: radial-gradient(circle, rgba(255, 107, 53, 0.38), transparent 70%);
+          background: radial-gradient(circle, rgba(245, 163, 154, 0.42), transparent 70%);
         }
 
         .container {
@@ -695,7 +721,7 @@ export default function App() {
 
         .smart-image {
           overflow: hidden;
-          background: #E8E5DF;
+          background: #F4EDEA;
         }
 
         .smart-image.is-loaded .image-skeleton,
@@ -707,7 +733,7 @@ export default function App() {
         .image-skeleton {
           position: absolute;
           inset: 0;
-          background: linear-gradient(90deg, #E5E1DA 0%, #F4F1EA 45%, #E5E1DA 100%);
+          background: linear-gradient(90deg, #EFE5E2 0%, #FAF4F2 45%, #EFE5E2 100%);
           background-size: 200% 100%;
           animation: shimmer 1.4s linear infinite;
           z-index: 1;
@@ -718,7 +744,7 @@ export default function App() {
           inset: 0;
           display: grid;
           place-items: center;
-          background: #EEEAE4;
+          background: #F7EFEC;
           z-index: 1;
         }
 
@@ -919,6 +945,7 @@ export default function App() {
           line-height: 1.7;
         }
 
+        /* Collage gallery: mobile -> horizontal snap slider; desktop -> mosaic grid */
         .gallery-grid {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -929,9 +956,18 @@ export default function App() {
           position: relative;
           overflow: hidden;
           border-radius: var(--radius-lg);
-          aspect-ratio: 1 / 1.05;
           background: #E9E4DE;
           box-shadow: 0 12px 28px rgba(26, 26, 26, 0.08);
+        }
+
+        /* Ensure images cover their tile */
+        .gallery-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+          display: block;
+          transition: transform 360ms ease;
         }
 
         .gallery-item img,
@@ -1261,6 +1297,7 @@ export default function App() {
           .hero-grid {
             grid-template-columns: 1.05fr 0.95fr;
             gap: 34px;
+            align-items: stretch;
           }
 
           .nav-center {
@@ -1279,8 +1316,56 @@ export default function App() {
             grid-template-columns: repeat(3, minmax(0, 1fr));
           }
 
+          /* Desktop: collage with a prominent large image on the left and stacked small tiles on the right */
           .gallery-grid {
-            gap: 16px;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 18px;
+            height: 520px;
+            align-items: stretch;
+            grid-auto-rows: 1fr;
+          }
+
+          .gallery-grid .gallery-item {
+            transition: transform 520ms cubic-bezier(.2,.9,.2,1), box-shadow 520ms ease, opacity 520ms ease;
+            will-change: transform, opacity;
+            height: 100%;
+          }
+
+          /* The active large tile occupies the full left column */
+          .gallery-grid .gallery-item.gallery-large {
+            grid-column: 1 / 2;
+            grid-row: 1 / -1; /* full height */
+            z-index: 4;
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 34px 70px rgba(18,18,18,0.18);
+            opacity: 1;
+          }
+
+          /* All other tiles go to the right column and stack */
+          .gallery-grid .gallery-item:not(.gallery-large) {
+            grid-column: 2 / 3;
+            opacity: 0.98;
+            transform: translateY(0) scale(1);
+          }
+
+          .gallery-grid .gallery-item:not(.gallery-large):nth-child(odd) {
+            transform: translateY(6px) scale(0.995);
+          }
+
+          /* Image smoothing and subtle hover */
+          .gallery-item:hover { transform: translateY(-6px) scale(1.01); }
+          .gallery-item .smart-image img { transition: transform 520ms ease, opacity 520ms ease; }
+          .gallery-item.gallery-large .smart-image img { transform-origin: center center; }
+
+          @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.98) translateY(6px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+          }
+
+          .gallery-item.gallery-large .smart-image { animation: fadeInScale 600ms ease both; }
+
+          @media (min-width: 1024px) {
+            .gallery-grid { height: 640px; gap: 20px; }
           }
 
           .stats-grid {
@@ -1314,8 +1399,33 @@ export default function App() {
             padding-top: 62px;
           }
 
+          .hero-media {
+            height: 100%;
+          }
+
+          .hero-frame {
+            height: 100%;
+          }
+
           .hero-image {
+            height: 100%;
             min-height: 540px;
+          }
+
+          /* Desktop: asegurar que la imagen del hero se muestre en cover y bien encuadrada */
+          .hero-frame .hero-image {
+            height: 100%;
+            min-height: 540px;
+            display: block;
+            overflow: hidden;
+          }
+
+          .hero-frame .hero-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center center !important;
+            display: block !important;
           }
 
           .service-image {
@@ -1343,17 +1453,100 @@ export default function App() {
 
           .hero-image {
             min-height: 350px;
+            display: none;
           }
+
+          
 
           .hero-badge {
             right: 14px;
             bottom: 14px;
             font-size: 0.92rem;
+            display: none;
           }
 
           .service-image {
             height: 230px;
           }
+
+          /* Mobile: convertir la galería en slider collage */
+          .gallery-grid {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 12px;
+          }
+
+          .gallery-item {
+            flex: 0 0 78%;
+            scroll-snap-align: center;
+            border-radius: var(--radius-lg);
+            transform-origin: center;
+            transition: transform 360ms ease, box-shadow 360ms ease;
+          }
+
+          .gallery-item img {
+            transition: transform 360ms ease;
+          }
+
+          
+
+          .gallery-item:active,
+          .gallery-item:focus,
+          .gallery-item:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          }
+
+          /* Ocultar elementos no esenciales en mobile */
+          .hero-meta,
+          .meta-pill,
+          .avatars {
+            display: none;
+          }
+
+          /* Ocultar decoraciones y marquee que muestran la barra ovalada en mobile */
+          .page-shell::before,
+          .page-shell::after,
+          .hero-frame::before,
+          .marquee-shell {
+            display: none !important;
+          }
+          /* Asegurar que no quede el fondo verde/oval del hero-frame en mobile */
+          .hero-frame {
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            min-height: 0 !important;
+            height: auto !important;
+            overflow: visible !important;
+          }
+
+          /* También quitar fondo y padding del contenedor .hero-media en mobile */
+          .hero-media {
+            background: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+          }
+
+          .marquee-shell {
+            height: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            overflow: hidden !important;
+          }
+          .marquee { display: none !important; }
+
+          /* Mejor visual para el nav-center en mobile */
+          .nav-center {
+            display: none;
+          }
+
+          
         }
       `}</style>
 
@@ -1489,6 +1682,8 @@ export default function App() {
             title="Tres experiencias clave para renovar, iluminar y cuidar tu cabello."
             description="Cada servicio se diseña con diagnóstico previo, una ejecución pulida y un acabado pensado para que salgas lista para cualquier ocasión."
           />
+          
+
           <div className="services-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
@@ -1518,8 +1713,8 @@ export default function App() {
             description="Explora una selección de imágenes reales con estética editorial y un enfoque limpio, sofisticado y femenino."
           />
           <div className="gallery-grid">
-            {gallery.map((item) => (
-              <div className="gallery-item" key={item.alt}>
+            {gallery.map((item, i) => (
+              <div className={`gallery-item ${galleryLargeIndex === i ? 'gallery-large' : ''}`} key={`${item.alt}-${i}`}>
                 <SmartImage src={item.src} alt={item.alt} />
               </div>
             ))}
@@ -1658,7 +1853,6 @@ export default function App() {
 
           <div className="footer-bottom">
             <span>© 2026 Beauty Salon. Todos los derechos reservados.</span>
-            <span>Diseño responsive mobile-first con imágenes reales de Unsplash.</span>
           </div>
         </div>
       </footer>
