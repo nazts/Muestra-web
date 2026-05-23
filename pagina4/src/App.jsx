@@ -14,7 +14,7 @@ const imagenes = {
   tratamiento: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80',
   tratamientoServicio: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
   galeria1: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=500&q=80',
-  galeria2: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=500&q=80',
+  galeria2: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&q=80',
   galeria3: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80',
   galeria4: 'https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=500&q=80',
   avatar1: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
@@ -69,6 +69,7 @@ const gallery = [
   { src: imagenes.corteServicio, alt: 'Corte moderno y detalle de textura' },
   { src: imagenes.colorServicio, alt: 'Coloración con acabado luminoso' },
   { src: imagenes.tratamientoServicio, alt: 'Tratamiento nutritivo y brillo intenso' },
+  { src: imagenes.corte, alt: 'Acabado profesional clásico' },
 ];
 
 const testimonials = [
@@ -1316,13 +1317,13 @@ export default function App() {
             grid-template-columns: repeat(3, minmax(0, 1fr));
           }
 
-          /* Desktop: collage with a prominent large image on the left and stacked small tiles on the right */
+          /* Desktop: transform gallery into a playful collage/mosaic */
           .gallery-grid {
-            grid-template-columns: 1.7fr 1fr;
-            gap: 18px;
-            height: 520px;
-            align-items: stretch;
-            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-auto-rows: 180px;
+            grid-auto-flow: dense;
+            gap: 16px;
+            height: auto;
           }
 
           .gallery-grid .gallery-item {
@@ -1331,26 +1332,28 @@ export default function App() {
             height: 100%;
           }
 
-          /* The active large tile occupies the full left column */
+          /* The active large tile occupies 2x2 grid slots */
           .gallery-grid .gallery-item.gallery-large {
-            grid-column: 1 / 2;
-            grid-row: 1 / -1; /* full height */
+            grid-column: span 2;
+            grid-row: span 2;
             z-index: 4;
             transform: translateY(-6px) scale(1.02);
             box-shadow: 0 34px 70px rgba(18,18,18,0.18);
             opacity: 1;
           }
 
-          /* All other tiles go to the right column and stack */
+          /* All other tiles naturally flow into 1x1 slots */
           .gallery-grid .gallery-item:not(.gallery-large) {
-            grid-column: 2 / 3;
-            opacity: 0.98;
+            grid-column: span 1;
+            grid-row: span 1;
+            opacity: 0.95;
             transform: translateY(0) scale(1);
           }
 
           .gallery-grid .gallery-item:not(.gallery-large):nth-child(odd) {
             transform: translateY(6px) scale(0.995);
           }
+
 
           /* Image smoothing and subtle hover */
           .gallery-item:hover { transform: translateY(-6px) scale(1.01); }
@@ -1365,7 +1368,7 @@ export default function App() {
           .gallery-item.gallery-large .smart-image { animation: fadeInScale 600ms ease both; }
 
           @media (min-width: 1024px) {
-            .gallery-grid { height: 640px; gap: 20px; }
+            .gallery-grid { grid-auto-rows: 240px; gap: 20px; }
           }
 
           .stats-grid {
