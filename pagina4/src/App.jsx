@@ -7,16 +7,23 @@ const imagenes = {
   corteAutor2: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80',
   corteAutor3: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80',
   corteAutor4: 'https://images.unsplash.com/photo-1582095133179-bfd08e2d0008?w=600&q=80',
-  corteAutor5: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80',
-  corteServicio: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80',
+  fotoservicio1: 'https://images.unsplash.com/photo-1599747176324-b61bb11f7f6d?w=600&q=80',
+  fotoservicio2: 'https://images.unsplash.com/photo-1595966707339-cb57ec314035?w=600&q=80',
+  fotoservicio3: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
   color: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80',
-  colorServicio: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=600&q=80',
   tratamiento: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80',
-  tratamientoServicio: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80',
-  galeria1: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=500&q=80',
-  galeria2: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&q=80',
-  galeria3: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=500&q=80',
-  galeria4: 'https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=500&q=80',
+  galeria1: 'https://images.unsplash.com/photo-1551184451-76b762941ad6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria2: 'https://images.unsplash.com/photo-1555820585-c5ae44394b79?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria3: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria4: 'https://images.unsplash.com/photo-1544717304-a2db4a7b16ee?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria5: 'https://images.unsplash.com/photo-1595475884562-073c30d45670?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria6: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=1136&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria7: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria8: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria9: 'https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria10: 'https://images.unsplash.com/photo-1607008829749-c0f284a49fc4?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria11: 'https://images.unsplash.com/photo-1695527081848-1e46c06e6458?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  galeria12: 'https://images.unsplash.com/photo-1637777269308-6a072f24e8a4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   avatar1: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
   avatar2: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
   avatar3: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80',
@@ -34,25 +41,46 @@ const brands = ["L'Oréal", 'Kérastase', 'Redken', 'Wella'];
 
 const services = [
   {
-    title: 'Corte de Autor',
-    description: 'Diseño visagista, forma precisa y acabado pulido para un look moderno y fácil de peinar.',
-    price: '$45',
-    image: imagenes.corteAutor5,
-    alt: 'Estilista realizando un corte de cabello profesional',
+    title: 'Cabello',
+    description: 'Corte dama y caballero, Lavado y secado, Peinado y brushing, Alisado y keratina, Ondulado permanente.',
+    price: 'Desde $30',
+    image: imagenes.fotoservicio1,
+    alt: 'Servicios de cabello profesional',
   },
   {
-    title: 'Coloración Signature',
-    description: 'Balayage, gloss y tonos personalizados para lograr brillo profundo y dimensión elegante.',
-    price: '$78',
-    image: imagenes.colorServicio,
-    alt: 'Aplicación de coloración en cabello rubio',
+    title: 'Color',
+    description: 'Tinte completo, Mechas y balayage, Decoloración, Retoque de raíces, Matización.',
+    price: 'Desde $50',
+    image: imagenes.fotoservicio2,
+    alt: 'Servicios de coloración y balayage',
   },
   {
-    title: 'Tratamiento Lumina',
-    description: 'Nutrición intensa, reparación de fibra y sellado de cutícula para recuperar suavidad y fuerza.',
-    price: '$62',
-    image: imagenes.tratamientoServicio,
-    alt: 'Tratamiento capilar con producto aplicado en cabello',
+    title: 'Uñas',
+    description: 'Manicure y pedicure, Esmalte semipermanente, Uñas acrílicas y gel, Nail art, Spa de manos y pies.',
+    price: 'Desde $25',
+    image: imagenes.fotoservicio3,
+    alt: 'Servicios de uñas y manicure',
+  },
+  {
+    title: 'Tratamientos',
+    description: 'Hidratación capilar, Mascarillas faciales, Limpieza facial, Exfoliación corporal, Masajes relajantes.',
+    price: 'Desde $40',
+    image: imagenes.fotogaleria5,
+    alt: 'Tratamientos capilares y faciales',
+  },
+  {
+    title: 'Depilación',
+    description: 'Cera facial y corporal, Diseño de cejas, Hilo y pinzas, Tinte de cejas y pestañas, Lifting de pestañas.',
+    price: 'Desde $20',
+    image: imagenes.fotogaleria6,
+    alt: 'Servicios de depilación',
+  },
+  {
+    title: 'Servicios Especiales',
+    description: 'Maquillaje profesional, Peinados para eventos, Extensiones de cabello, Novias y quinceañeras, Paquetes de spa.',
+    price: 'Consultar',
+    image: imagenes.fotogaleria7,
+    alt: 'Servicios especiales para eventos',
   },
 ];
 
@@ -61,15 +89,14 @@ const gallery = [
   { src: imagenes.galeria2, alt: 'Styling de cabello con acabado editorial' },
   { src: imagenes.galeria3, alt: 'Mujer con look de salón moderno' },
   { src: imagenes.galeria4, alt: 'Cabello brillante con estilo de moda 2025' },
-  { src: imagenes.corteAutor1, alt: 'Corte autor: estilista cortando con precisión' },
-  { src: imagenes.corteAutor2, alt: 'Corte autor: bob preciso' },
-  { src: imagenes.corteAutor3, alt: 'Corte autor: tijeras profesionales detalle' },
-  { src: imagenes.corteAutor4, alt: 'Corte autor: detalle de cabello fino' },
-  { src: imagenes.corteAutor5, alt: 'Corte autor: resultado final corte moderno' },
-  { src: imagenes.corteServicio, alt: 'Corte moderno y detalle de textura' },
-  { src: imagenes.colorServicio, alt: 'Coloración con acabado luminoso' },
-  { src: imagenes.tratamientoServicio, alt: 'Tratamiento nutritivo y brillo intenso' },
-  { src: imagenes.corte, alt: 'Acabado profesional clásico' },
+  { src: imagenes.galeria5, alt: 'Cabello rubio platinado con brillo' },
+  { src: imagenes.galeria6, alt: 'Peinado elegante con textura definida' },
+  { src: imagenes.galeria7, alt: 'Styling profesional de salón de belleza' },
+  { src: imagenes.galeria8, alt: 'Acabado profesional con brillo intenso' },
+  { src: imagenes.galeria9, alt: 'Estilo moderno con textura suave' },
+  { src: imagenes.galeria10, alt: 'Peinado editorial de lujo' },
+  { src: imagenes.galeria11, alt: 'Cabello con efecto profesional' },
+  { src: imagenes.galeria12, alt: 'Tratamiento capilar de lujo' },
 ];
 
 const testimonials = [
@@ -94,7 +121,7 @@ const testimonials = [
 ];
 
 const statsTargets = [
-  { label: 'Clientas', value: 500, suffix: '+' },
+  { label: 'Clientas', value: 2000, suffix: '+' },
   { label: 'Años', value: 8, suffix: '' },
   { label: 'Servicios', value: 15, suffix: '' },
   { label: 'Valoración', value: 4.9, suffix: '★', decimals: 1 },
@@ -819,7 +846,7 @@ export default function App() {
 
         .section-title {
           max-width: 760px;
-          margin-bottom: 28px;
+          margin-bottom: 52px;
         }
 
         .section-title span {
@@ -950,7 +977,8 @@ export default function App() {
         .gallery-grid {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 14px;
+          gap: 18px;
+          margin-top: 12px;
         }
 
         .gallery-item {
@@ -1319,8 +1347,8 @@ export default function App() {
 
           /* Desktop: transform gallery into a playful collage/mosaic */
           .gallery-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            grid-auto-rows: 180px;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-auto-rows: 160px;
             grid-auto-flow: dense;
             gap: 16px;
             height: auto;
@@ -1330,45 +1358,68 @@ export default function App() {
             transition: transform 520ms cubic-bezier(.2,.9,.2,1), box-shadow 520ms ease, opacity 520ms ease;
             will-change: transform, opacity;
             height: 100%;
+            grid-column: span 1;
+            grid-row: span 1;
           }
 
-          /* The active large tile occupies 2x2 grid slots */
+          /* The active large tile occupies 2x2 grid slots and fills the space */
           .gallery-grid .gallery-item.gallery-large {
             grid-column: span 2;
             grid-row: span 2;
             z-index: 4;
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 34px 70px rgba(18,18,18,0.18);
+            transition: grid-column 520ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                        grid-row 520ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                        transform 520ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                        box-shadow 520ms ease,
+                        opacity 520ms ease;
+            transform: perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(-8px) scale(1.08);
+            box-shadow: 0 40px 100px rgba(18, 18, 18, 0.24);
             opacity: 1;
           }
 
-          /* All other tiles naturally flow into 1x1 slots */
+          /* All other tiles naturally flow into 1x1 slots thanks to grid-auto-flow: dense */
           .gallery-grid .gallery-item:not(.gallery-large) {
-            grid-column: span 1;
-            grid-row: span 1;
-            opacity: 0.95;
+            transition: all 520ms cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0.92;
             transform: translateY(0) scale(1);
           }
 
           .gallery-grid .gallery-item:not(.gallery-large):nth-child(odd) {
-            transform: translateY(6px) scale(0.995);
+            transform: translateY(2px) scale(0.99);
           }
 
 
           /* Image smoothing and subtle hover */
           .gallery-item:hover { transform: translateY(-6px) scale(1.01); }
-          .gallery-item .smart-image img { transition: transform 520ms ease, opacity 520ms ease; }
-          .gallery-item.gallery-large .smart-image img { transform-origin: center center; }
-
-          @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.98) translateY(6px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+          .gallery-item .smart-image img { 
+            transition: transform 520ms cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        opacity 520ms ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .gallery-item.gallery-large .smart-image img { 
+            transform-origin: center center;
+            transform: scale(1);
           }
 
-          .gallery-item.gallery-large .smart-image { animation: fadeInScale 600ms ease both; }
+          @keyframes fadeInScale {
+            from { 
+              opacity: 0;
+              transform: perspective(1200px) rotateX(-10deg) scale(0.92) translateY(12px); 
+            }
+            to { 
+              opacity: 1;
+              transform: perspective(1200px) rotateX(0deg) scale(1) translateY(0); 
+            }
+          }
+
+          .gallery-item.gallery-large .smart-image { 
+            animation: fadeInScale 720ms cubic-bezier(0.34, 1.56, 0.64, 1) both; 
+          }
 
           @media (min-width: 1024px) {
-            .gallery-grid { grid-auto-rows: 240px; gap: 20px; }
+            .gallery-grid { grid-auto-rows: 240px; gap: 24px; }
           }
 
           .stats-grid {
@@ -1607,10 +1658,9 @@ export default function App() {
           <div className="hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">Salón de belleza premium en español</div>
-              <h1>Transforma Tu Cabello con Estilo Moderno</h1>
+              <h1>Tu Belleza, Nuestro Arte</h1>
               <p>
-                En Beauty Salon creamos looks elegantes con técnicas de color, corte y tratamiento pensadas para resaltar tu
-                belleza natural. Todo con una experiencia cálida, contemporánea y totalmente cuidada.
+                En Beauty Salon ofrecemos una experiencia integral de belleza: desde peinados y coloraciones profesionales hasta cuidado de uñas, tratamientos corporales y servicios especiales. Cada detalle diseñado para resaltar tu belleza natural con técnica, estilo y calidez.
               </p>
 
               <div className="hero-actions">
@@ -1625,7 +1675,7 @@ export default function App() {
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2l2.2 5.5L20 10l-5.8 2.5L12 18l-2.2-5.5L4 10l5.8-2.5L12 2Z" fill="currentColor" />
                   </svg>
-                  Nosotras: estilistas expertas en looks modernos y luminosos.
+                  Nosotras: profesionales expertas en belleza integral con enfoque en calidad y personalización.
                 </div>
                 <div className="social-proof">
                   <div className="avatars" aria-hidden="true">
@@ -1682,17 +1732,14 @@ export default function App() {
           <div id="precios" aria-hidden="true" />
           <SectionTitle
             eyebrow="Servicios"
-            title="Tres experiencias clave para renovar, iluminar y cuidar tu cabello."
-            description="Cada servicio se diseña con diagnóstico previo, una ejecución pulida y un acabado pensado para que salgas lista para cualquier ocasión."
+            title="Seis categorías de servicios para cuidar cada aspecto de tu belleza."
+            description="Cabello, color, uñas, tratamientos corporales, depilación y servicios especiales. Cada área con profesionales expertas, productos de calidad premium y un enfoque 100% personalizado."
           />
           
 
           <div className="services-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
-                <div className="service-image">
-                  <SmartImage src={service.image} alt={service.alt} />
-                </div>
                 <div className="service-content">
                   <div className="service-top">
                     <h3>{service.title}</h3>
@@ -1789,9 +1836,6 @@ export default function App() {
                 <a className="btn btn-solid" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">
                   <WhatsAppIcon />
                   Reservar por WhatsApp
-                </a>
-                <a className="btn btn-ghost" href="#servicios">
-                  Ver nuevamente los servicios
                 </a>
               </div>
             </div>
